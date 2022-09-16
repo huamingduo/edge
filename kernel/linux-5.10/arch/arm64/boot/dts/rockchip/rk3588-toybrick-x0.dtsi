@@ -29,7 +29,7 @@
 			compatible = "rockchip,dummy-codec";
 		#sound-dai-cells = <0>;
 	};
-
+	/*
 	es8388_sound: es8388-sound {
 		status = "okay";
 		compatible = "rockchip,multicodecs-card";
@@ -65,7 +65,7 @@
 			linux,code = <KEY_PLAYPAUSE>;
 			press-threshold-microvolt = <2000>;
 		};
-	};
+	};*/
 
 	hdmiin-sound {
 		compatible = "simple-audio-card";
@@ -511,7 +511,7 @@
 		rst_gpio_number = <&gpio3 RK_PC6 GPIO_ACTIVE_HIGH>;
 	};
 };
-
+/*
 &i2c7 {
 	status = "okay";
 	es8388: es8388@11 {
@@ -526,7 +526,7 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&i2s0_mclk>;
 	};
-};
+}; */
 
 &i2s5_8ch {
 	status = "okay";
@@ -673,6 +673,24 @@
 
 &u2phy3_host {
 	phy-supply = <&vcc5v0_host>;
+};
+
+&uart4 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart4m2_xfer>;
+};
+
+&uart5 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart5m0_xfer &uart5m0_ctsn>;
+};
+
+&uart6 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart6m1_xfer &uart6m1_ctsn>;
 };
 
 &uart8 {
