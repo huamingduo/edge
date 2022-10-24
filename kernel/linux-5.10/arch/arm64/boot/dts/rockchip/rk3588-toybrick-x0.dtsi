@@ -10,13 +10,13 @@
 #include "rk3588-rk806-single.dtsi"
 
 / {
-	/* If hdmirx node is disabled, delete the reserved-memory node here. */
+	/* If hdmirx node is disabled, delete the reserved-memory node here. 
 	reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
 
-		/* Reserve 256MB memory for hdmirx-controller@fdee0000 */
+		// Reserve 256MB memory for hdmirx-controller@fdee0000 
 		cma {
 			compatible = "shared-dma-pool";
 			reusable;
@@ -29,9 +29,9 @@
 			compatible = "rockchip,dummy-codec";
 		#sound-dai-cells = <0>;
 	};
-	/*
+	
 	es8388_sound: es8388-sound {
-		status = "okay";
+		status = "disabled";
 		compatible = "rockchip,multicodecs-card";
 		rockchip,card-name = "rockchip,es8388";
 		hp-det-gpio = <&gpio1 RK_PD5 GPIO_ACTIVE_LOW>;
@@ -65,7 +65,7 @@
 			linux,code = <KEY_PLAYPAUSE>;
 			press-threshold-microvolt = <2000>;
 		};
-	};*/
+	};
 
 	hdmiin-sound {
 		compatible = "simple-audio-card";
@@ -81,7 +81,7 @@
 			sound-dai = <&hdmiin_dc>;
 		};
 	};
-
+*/
 	pcie20_avdd0v85: pcie20-avdd0v85 {
 		compatible = "regulator-fixed";
 		regulator-name = "pcie20_avdd0v85";
@@ -206,7 +206,7 @@
 		BT,reset_gpio    = <&gpio3 RK_PA6 GPIO_ACTIVE_HIGH>;
 		BT,wake_gpio     = <&gpio3 RK_PA1 GPIO_ACTIVE_HIGH>;
 		BT,wake_host_irq = <&gpio3 RK_PA0 GPIO_ACTIVE_HIGH>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	wireless_wlan: wireless-wlan {
@@ -216,17 +216,18 @@
 		pinctrl-0 = <&wifi_host_wake_irq>, <&wifi_poweren_gpio>;
 		WIFI,host_wake_irq = <&gpio3 RK_PA7 GPIO_ACTIVE_HIGH>;
 		WIFI,poweren_gpio = <&gpio3 RK_PB1 GPIO_ACTIVE_HIGH>;
-		status = "okay";
+		status = "disabled";
 	};
+
 };
 
 &backlight {
 	pwms = <&pwm2 0 25000 0>;
-	status = "okay";
+	status = "disabled";
 };
 
 &can2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &combphy0_ps {
@@ -341,7 +342,7 @@
 
 /* Should work with at least 128MB cma reserved above. */
 &hdmirx_ctrler {
-	status = "okay";
+	status = "disabled";
 
 	/* Effective level used to trigger HPD: 0-low, 1-high */
 	hpd-trigger-level = <1>;
@@ -656,7 +657,7 @@
 };
 
 &pwm2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &sata0 {
