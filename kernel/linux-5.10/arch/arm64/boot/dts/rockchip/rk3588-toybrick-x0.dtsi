@@ -675,6 +675,12 @@
 	phy-supply = <&vcc5v0_host>;
 };
 
+&uart0 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart0m2_xfer>;
+};
+
 &uart4 {
 	status = "okay";
 	pinctrl-names = "default";
@@ -693,10 +699,22 @@
 	pinctrl-0 = <&uart6m1_xfer &uart6m1_ctsn>;
 };
 
+&uart7 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart7m2_xfer>;
+};
+
 &uart8 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart8m1_xfer &uart8m1_ctsn>;
+};
+
+&uart9 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart9m1_xfer &uart9m1_ctsn>;
 };
 
 &usbdp_phy0 {
