@@ -680,42 +680,49 @@
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart0m2_xfer>;
+	dma-names = "tx", "rx";
 };
 
 &uart4 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart4m2_xfer>;
+	dma-names = "tx", "rx";
 };
 
 &uart5 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart5m0_xfer &uart5m0_ctsn>;
+	dma-names = "tx", "rx";
 };
 
 &uart6 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart6m1_xfer &uart6m1_ctsn>;
+	dma-names = "tx", "rx";
 };
 
 &uart7 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart7m2_xfer>;
+	dma-names = "tx", "rx";
 };
 
 &uart8 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart8m1_xfer &uart8m1_ctsn>;
+	dma-names = "tx", "rx";
 };
 
 &uart9 {
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart9m1_xfer &uart9m1_ctsn>;
+	dma-names = "tx", "rx";
 };
 
 &usbdp_phy0 {
