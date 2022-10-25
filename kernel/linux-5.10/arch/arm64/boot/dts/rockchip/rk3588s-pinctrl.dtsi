@@ -2920,9 +2920,9 @@
 		uart0m1_xfer: uart0m1-xfer {
 			rockchip,pins =
 				/* uart0_rx_m1 */
-				<0 RK_PB0 4 &pcfg_pull_up>,
+				<0 RK_PB0 4 &pcfg_pull_up_drv_level_12>,
 				/* uart0_tx_m1 */
-				<0 RK_PB1 4 &pcfg_pull_up>;
+				<0 RK_PB1 4 &pcfg_pull_up_drv_level_12>;
 		};
 
 		/omit-if-no-ref/
@@ -3106,9 +3106,9 @@
 		uart4m2_xfer: uart4m2-xfer {
 			rockchip,pins =
 				/* uart4_rx_m2 */
-				<1 RK_PB2 10 &pcfg_pull_up>,
+				<1 RK_PB2 10 &pcfg_pull_up_drv_level_12>,
 				/* uart4_tx_m2 */
-				<1 RK_PB3 10 &pcfg_pull_up>;
+				<1 RK_PB3 10 &pcfg_pull_up_drv_level_12>;
 		};
 
 		/omit-if-no-ref/
@@ -3131,9 +3131,9 @@
 		uart5m0_xfer: uart5m0-xfer {
 			rockchip,pins =
 				/* uart5_rx_m0 */
-				<4 RK_PD4 10 &pcfg_pull_up>,
+				<4 RK_PD4 10 &pcfg_pull_up_drv_level_12>,
 				/* uart5_tx_m0 */
-				<4 RK_PD5 10 &pcfg_pull_up>;
+				<4 RK_PD5 10 &pcfg_pull_up_drv_level_12>;
 		};
 
 		/omit-if-no-ref/
@@ -3188,9 +3188,9 @@
 		uart6m1_xfer: uart6m1-xfer {
 			rockchip,pins =
 				/* uart6_rx_m1 */
-				<1 RK_PA0 10 &pcfg_pull_up>,
+				<1 RK_PA0 10 &pcfg_pull_up_drv_level_12>,
 				/* uart6_tx_m1 */
-				<1 RK_PA1 10 &pcfg_pull_up>;
+				<1 RK_PA1 10 &pcfg_pull_up_drv_level_12>;
 		};
 
 		/omit-if-no-ref/
@@ -3245,9 +3245,9 @@
 		uart7m2_xfer: uart7m2-xfer {
 			rockchip,pins =
 				/* uart7_rx_m2 */
-				<1 RK_PB4 10 &pcfg_pull_up>,
+				<1 RK_PB4 10 &pcfg_pull_up_drv_level_12>,
 				/* uart7_tx_m2 */
-				<1 RK_PB5 10 &pcfg_pull_up>;
+				<1 RK_PB5 10 &pcfg_pull_up_drv_level_12>;
 		};
 	};
 
@@ -3279,9 +3279,9 @@
 		uart8m1_xfer: uart8m1-xfer {
 			rockchip,pins =
 				/* uart8_rx_m1 */
-				<3 RK_PA3 10 &pcfg_pull_up>,
+				<3 RK_PA3 10 &pcfg_pull_up_drv_level_12>,
 				/* uart8_tx_m1 */
-				<3 RK_PA2 10 &pcfg_pull_up>;
+				<3 RK_PA2 10 &pcfg_pull_up_drv_level_12>;
 		};
 
 		/omit-if-no-ref/
@@ -3311,9 +3311,9 @@
 		uart9m1_xfer: uart9m1-xfer {
 			rockchip,pins =
 				/* uart9_rx_m1 */
-				<4 RK_PB5 10 &pcfg_pull_up>,
+				<4 RK_PB5 10 &pcfg_pull_up_drv_level_12>,
 				/* uart9_tx_m1 */
-				<4 RK_PB4 10 &pcfg_pull_up>;
+				<4 RK_PB4 10 &pcfg_pull_up_drv_level_12>;
 		};
 
 		/omit-if-no-ref/
