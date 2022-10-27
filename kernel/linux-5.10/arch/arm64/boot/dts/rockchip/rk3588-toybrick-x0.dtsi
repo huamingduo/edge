@@ -10,13 +10,13 @@
 #include "rk3588-rk806-single.dtsi"
 
 / {
-	/* If hdmirx node is disabled, delete the reserved-memory node here. 
+	/* If hdmirx node is disabled, delete the reserved-memory node here. */
 	reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
 
-		// Reserve 256MB memory for hdmirx-controller@fdee0000 
+		/* Reserve 256MB memory for hdmirx-controller@fdee0000 */
 		cma {
 			compatible = "shared-dma-pool";
 			reusable;
@@ -31,7 +31,7 @@
 	};
 	
 	es8388_sound: es8388-sound {
-		status = "disabled";
+		status = "okay";
 		compatible = "rockchip,multicodecs-card";
 		rockchip,card-name = "rockchip,es8388";
 		hp-det-gpio = <&gpio1 RK_PD5 GPIO_ACTIVE_LOW>;
@@ -81,7 +81,7 @@
 			sound-dai = <&hdmiin_dc>;
 		};
 	};
-*/
+
 	pcie20_avdd0v85: pcie20-avdd0v85 {
 		compatible = "regulator-fixed";
 		regulator-name = "pcie20_avdd0v85";
@@ -227,7 +227,7 @@
 };
 
 &can2 {
-	status = "disabled";
+	status = "okay";
 };
 
 &combphy0_ps {
@@ -342,7 +342,7 @@
 
 /* Should work with at least 128MB cma reserved above. */
 &hdmirx_ctrler {
-	status = "disabled";
+	status = "okay";
 
 	/* Effective level used to trigger HPD: 0-low, 1-high */
 	hpd-trigger-level = <1>;
@@ -512,7 +512,7 @@
 		rst_gpio_number = <&gpio3 RK_PC6 GPIO_ACTIVE_HIGH>;
 	};
 };
-/*
+
 &i2c7 {
 	status = "okay";
 	es8388: es8388@11 {
@@ -527,7 +527,7 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&i2s0_mclk>;
 	};
-}; */
+};
 
 &i2s5_8ch {
 	status = "okay";
@@ -657,7 +657,7 @@
 };
 
 &pwm2 {
-	status = "disabled";
+	status = "okay";
 };
 
 &sata0 {
