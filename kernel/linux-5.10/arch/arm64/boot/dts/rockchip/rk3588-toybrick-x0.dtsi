@@ -10,13 +10,13 @@
 #include "rk3588-rk806-single.dtsi"
 
 / {
-	/* If hdmirx node is disabled, delete the reserved-memory node here. */
+	/* If hdmirx node is disabled, delete the reserved-memory node here. 
 	reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
 
-		/* Reserve 256MB memory for hdmirx-controller@fdee0000 */
+		// Reserve 256MB memory for hdmirx-controller@fdee0000 
 		cma {
 			compatible = "shared-dma-pool";
 			reusable;
@@ -24,14 +24,14 @@
 			linux,cma-default;
 		};
 	};
-
+*/
 	hdmiin_dc: hdmiin-dc {
 			compatible = "rockchip,dummy-codec";
 		#sound-dai-cells = <0>;
 	};
-	
+
 	es8388_sound: es8388-sound {
-		status = "okay";
+		status = "disabled";
 		compatible = "rockchip,multicodecs-card";
 		rockchip,card-name = "rockchip,es8388";
 		hp-det-gpio = <&gpio1 RK_PD5 GPIO_ACTIVE_LOW>;
@@ -73,7 +73,7 @@
 		simple-audio-card,name = "rockchip,hdmiin";
 		simple-audio-card,bitclock-master = <&dailink0_master>;
 		simple-audio-card,frame-master = <&dailink0_master>;
-		status = "okay";
+		status = "disabled";
 		simple-audio-card,cpu {
 			sound-dai = <&i2s7_8ch>;
 		};
@@ -715,7 +715,6 @@
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart8m1_xfer &uart8m1_ctsn>;
-	dma-names = "tx", "rx";
 };
 
 &uart9 {
