@@ -10,13 +10,13 @@
 #include "rk3588-rk806-single.dtsi"
 
 / {
-	/* If hdmirx node is disabled, delete the reserved-memory node here. 
+	/* If hdmirx node is disabled, delete the reserved-memory node here.
 	reserved-memory {
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
 
-		// Reserve 256MB memory for hdmirx-controller@fdee0000 
+		// Reserve 256MB memory for hdmirx-controller@fdee0000
 		cma {
 			compatible = "shared-dma-pool";
 			reusable;
@@ -29,6 +29,20 @@
 			compatible = "rockchip,dummy-codec";
 		#sound-dai-cells = <0>;
 	};
+
+        fan: pwm-fan {
+               compatible = "pwm-fan";
+               #cooling-cells = <2>;
+               pwms = <&pwm9 0 50000 0>;
+               cooling-levels = <0 50 100 150 200 255>;
+               rockchip,temp-trips = <
+                  50000 1
+                  55000 2
+                  60000 3
+                  65000 4
+                  70000 5
+               >;
+        };
 
 	es8388_sound: es8388-sound {
 		status = "disabled";
@@ -657,6 +671,10 @@
 };
 
 &pwm2 {
+	status = "okay";
+};
+&pwm9 {
+        pinctrl-0 = <&pwm9m1_pins>;
 	status = "okay";
 };
 
