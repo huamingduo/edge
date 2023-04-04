@@ -142,7 +142,8 @@ sphinx_*/
 
 *.img
 
-/build
+# /build
+**/__pycache__
 kernel/linux-5.10/System.map
 kernel/linux-5.10/arch/arm64/boot/Image
 kernel/linux-5.10/arch/arm64/include/generated/
