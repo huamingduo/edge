@@ -8,7 +8,7 @@
 /*
  *
  * Automatically generated file; DO NOT EDIT.
- * Linux/arm64 5.10.66 Kernel Configuration
+ * Linux/arm64 5.10.110 Kernel Configuration
  *
  */
 /*
